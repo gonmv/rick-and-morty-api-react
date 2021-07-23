@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.bgimg {
+  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://camo.githubusercontent.com/015fb7c8bcc0358082d1ed91078c4c5c6cd90f0278a42ca9052fbf532b68580a/68747470733a2f2f7669676e657474652e77696b69612e6e6f636f6f6b69652e6e65742f7269636b616e646d6f7274792f696d616765732f322f32372f506f636b65745f6d6f727479735f62616e6e65722e6a7067);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  padding: 1% 10%;
+  opacity: 1;
+}
+
+
+
+h1, p, h3{
+  text-align: center;
+  color:white;
+  text-shadow: 0 0 5px #fff;
+  animation: blur 10s ease-out infinite;
+	-webkit-animation: blur 10s ease-out 
+}
+
+li {
+  color:white;
+}
+
+label {
+  text-align: center;
+  color: white;
+}
+
+
+@keyframes blur {  
+  0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+	5%		{text-shadow:  0 0 90px #fff;}
+	15%		{opacity: 1;}
+	20%		{text-shadow:  0 0 0px #fff;}
+	80%		{text-shadow:  0 0 0px #fff;}
+	85%		{opacity: 1;}
+	95%		{text-shadow:  0 0 90px #fff;}
+	100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+}
