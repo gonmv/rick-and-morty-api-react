@@ -4,6 +4,7 @@ import List from "./components/List";
 function App() {
   
   const[choice, setChoice] = useState([])
+  const[chEndpoint, setChEndpoint] = useState([])
 
   const apiUrl = "https://rickandmortyapi.com/api/"
 
@@ -12,6 +13,7 @@ function App() {
     console.log(choiceApi)
     const choiceApiJSON = await choiceApi.json()
     setChoice(choiceApiJSON.results)
+    setChEndpoint(endpoint)
   }
 
   return (
@@ -19,7 +21,7 @@ function App() {
         <h1>Rick & Morty's directory</h1>
         <p>(API from <a href="https://rickandmortyapi.com" target="blank_">HERE</a>)</p>
         <Search handleSearch={getChoiceApi}/>
-        <List choice={choice}/> 
+        <List choice={choice} endpoint={chEndpoint}/> 
         
     </div>
   );
